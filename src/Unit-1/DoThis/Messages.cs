@@ -3,14 +3,20 @@
     public class Messages
     {
         // in Messages.cs
+
         #region Neutral/system messages
+
         /// <summary>
         /// Marker class to continue processing.
         /// </summary>
-        public class ContinueProcessing { }
+        public class ContinueProcessing
+        {
+        }
+
         #endregion
 
         #region Success messages
+
         /// <summary>
         /// Base class for signalling that user input was valid.
         /// </summary>
@@ -23,9 +29,11 @@
 
             public string Reason { get; private set; }
         }
+
         #endregion
 
         #region Error messages
+
         /// <summary>
         /// Base class for signalling that user input was invalid.
         /// </summary>
@@ -44,7 +52,9 @@
         /// </summary>
         public class NullInputError : InputError
         {
-            public NullInputError(string reason) : base(reason) { }
+            public NullInputError(string reason) : base(reason)
+            {
+            }
         }
 
         /// <summary>
@@ -52,8 +62,11 @@
         /// </summary>
         public class ValidationError : InputError
         {
-            public ValidationError(string reason) : base(reason) { }
+            public ValidationError(string reason) : base(reason)
+            {
+            }
         }
+
         #endregion
     }
 }
